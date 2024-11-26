@@ -1,4 +1,4 @@
-#include "RNP.hpp"
+#include "PmergeMe.hpp"
 
 
 int main(int argc, char **argv)
@@ -7,8 +7,11 @@ int main(int argc, char **argv)
 		std::cout<< " invalid number of arguments "<< std::endl;
 	else
 	{
-		RNP r;
+		PmergeMe r;
 		r.parse(argv[1]);
-		// r.popall();
+		if(!r.solve())
+			std::cout << "Error during the sort" << std::endl;
+		else
+			r.display();
 	}
 }

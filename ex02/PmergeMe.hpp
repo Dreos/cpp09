@@ -1,26 +1,29 @@
-#ifndef RNP_H
-#define RNP_H
+#ifndef PMERGEME_H
+#define PMERGEME_H
 
 #include <string>
-#include <stack>
+#include <list>
+#include <vector>
 #include <iostream>
+#include <algorithm>
 
-class RNP
+class PmergeMe
 {
 	private :
-		std::stack<int> s;
+		std::list<int> l;
+		std::vector<int,int>v;
 	public :
-		RNP();
-		~RNP();
-		RNP(const RNP &toCopy);
-		RNP& operator=(const RNP &toAffect);
-		std::stack<int> getStack()const;
+		PmergeMe();
+		~PmergeMe();
+		PmergeMe(const PmergeMe &toCopy);
+		PmergeMe& operator=(const PmergeMe &toAffect);
+		std::list<int> &getList()const;
+		std::vector<pair<int,int>>&getVector()const;
 		int solve();
+		void display();
 		void parse(std::string arg);
-		void popall();
+		
 
 		
 };
-
-
 #endif
