@@ -1,6 +1,6 @@
 SRCS = main.cpp RNP.cpp
 
-NAME = main
+NAME = RNP
 
 OBJ = $(SRCS:.cpp=.o)
 

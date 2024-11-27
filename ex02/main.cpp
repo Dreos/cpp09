@@ -8,10 +8,13 @@ int main(int argc, char **argv)
 	else
 	{
 		PmergeMe r;
-		r.parse(argv[1]);
-		if(!r.solve())
-			std::cout << "Error during the sort" << std::endl;
+		
+		if(!r.solve(argv[1]))
+		{
+			r.displayList();
+		}
 		else
-			r.display();
+			std::cout << "Error during the sort" << std::endl;
+
 	}
 }

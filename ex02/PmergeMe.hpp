@@ -11,17 +11,21 @@ class PmergeMe
 {
 	private :
 		std::list<int> l;
-		std::vector<int,int>v;
+		std::vector<std::pair<int,int> >v;
 	public :
 		PmergeMe();
 		~PmergeMe();
 		PmergeMe(const PmergeMe &toCopy);
 		PmergeMe& operator=(const PmergeMe &toAffect);
-		std::list<int> &getList()const;
-		std::vector<pair<int,int>>&getVector()const;
-		int solve();
-		void display();
+		std::list<int> getList()const;
+		std::vector<std::pair<int,int> > getVector()const;
+		int solve(std::string arg);
 		void parse(std::string arg);
+		void fillVector();
+		void PutHighestValueInList();
+		void sortList();
+		void displayList();
+		
 		
 
 		
